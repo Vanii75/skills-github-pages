@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Car Dealership</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .featured-cars {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        .car {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        text-align: center;
+            height: 300px; 
+}     
+            
+       .car img {
+        max-width: 100%;
+           max-height: 200px; 
+           object-fit: cover; 
+        border-radius: 6px;
+}
+        .view-details {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .view-details:hover {
+            background: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #555;
+        }
+        @keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#intro h2 {
+    animation: flash 1s infinite; /* Flashing effect */
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SpeedWay Autoshop</h1>
+    <nav>
+        <a href="#featured">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="inventory.html">Inventory</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Tools</a>
+            <div class="dropdown-content">
+                <a href="https://www.edmunds.com/calculators/?utm_medium=sem&utm_source=google&utm_account=edmunds_marketing&utm_campaign=brand_calculators&utm_adgroup=calculators_affordability_calc&utm_term=car%20calculator&utm_matchtype=b&utm_content=711700556286&gad_source=1&gclid=Cj0KCQiApNW6BhD5ARIsACmEbkVpUT77RpclUbsTvAw4RdcaFyPe5t2yCpEnbBF8LFZerUYFYJC8DzIaAoZfEALw_wcB">Budget Calculator</a>
+                <a href="https://www.lendingtree.com/lp/auto/loans.html?esourceid=6284676&cproduct=autopurch&clicktype=headline-&cchannel=sem&cname=autopurch.nb&csource=google&disc=1,57,58,59,99&mtaid=3E594&campaign_id=21521922223&ad_group_id=166231772598&keyword_id=kwd-15365800&ad_id=707549247296&ad_click_type=headline&source=adwords&medium=search&campaign_id=21521922223&ad_group_id=166231772598&keyword_id=kwd-15365800&keyword_name=auto%20loan&match_type=e&ad_extension_id=&network_name=g&dev=c&ad_id=707549247296&placement_name=&cq_cmp=21521922223&cq_term=auto%20loan&cq_plac=&cq_net=g&cq_plt=gp&gad_source=1&gclid=Cj0KCQiApNW6BhD5ARIsACmEbkV7VM__WC6bH-a9NjGAaKUBncAw1EkFayzT3Ep-oSNErNELCIkVL4EaAjT9EALw_wcB&sessionid=cb336d4a-0425-424b-ad7f-b0fa8b30c523&mta=1">Financing Options</a>
+            </div>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="intro">
+        <h2>Come Find Your Car</h2>
+        <img src="https://www.autotrader.com/wp-content/uploads/2023/03/buy-a-car-online.jpg" alt ="Buy Car" style="width: 100%; border-radius: 5px;">
+    </section>
+    
+    <section id="featured">
+        <h2>Featured Cars</h2>
+        <div class="featured-cars">
+            <div class="car">
+                <img src="https://images.hgmsites.net/lrg/2018-honda-civic-si-coupe-manual-angular-front-exterior-view_100659534_l.jpg" alt="Car 1">
+                <h3>2018 Honda Civic</h3>
+                <p>Price: $20,000</p>
+                <p>Miles: 30,300</p>
+                <a href="car1.html" class="view-details">View Details</a>
+            </div>
+            <div class="car">
+                <img src="https://content.homenetiol.com/2000292/2235906/0x0/0edd43f92f49489c84ae38f7d27a3052.jpg" alt="Car 2">
+                <h3>2017 Ford Escape</h3>
+                <p>Price: $25,000</p>
+                <p>Miles: 27,260</p>
+                <a href="car2.html" class="view-details">View Details</a>
+            </div>
+            <div class="car">
+                <img src="https://images.dealer.com/ddc/vehicles/2025/Toyota/Camry/Sedan/trim_SE_2bd981/color/Midnight%20Black%20Metallic-218-26%2C28%2C33-640-en_US.jpg?impolicy=resize&w=640g" alt="Car 3">
+                <h3>2019 Toyota Camry</h3>
+                <p>Price: $30,000</p>
+                <p>Miles: 21,090</p>
+                <a href="car3.html" class="view-details">View Details</a>
+            </div>
+            <div class="car">
+                <img src="https://di-enrollment-api.s3.amazonaws.com/toyota/models/2022/corolla/trims/SE+Apex+Edition.jpg" alt="Car 4">
+                <h3>2022 Toyota Corolla</h3>
+                <p>Price: $30,000</p>
+                <p>Miles: 34,500</p>
+                <a href="car4.html" class="view-details">View Details</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a trusted used car dealership with a wide selection of vehicles to choose from. Dedicating ourselves to providing the best used cars out there.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Write your questions or comments here." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Used Car Dealership. All rights reserved.</p>
+    <p>BlackBox AI</p>
+    <p>Phoenix Code</p>
+    <p>Microsoft Visual Studio Code</p>
+
+</footer>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("carModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Function to open the modal with car details
+    function openModal(title, details) {
+        document.getElementById("modalCarTitle").innerText = title;
+        document.getElementById("modalCarDetails").innerText = details;
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
